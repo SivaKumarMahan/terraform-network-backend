@@ -1,0 +1,5 @@
+resource_group_name = "test-rg"
+location            = "Central India"
+vnet_name           = "testVNet"
+subnet_name         = "testSubnet"
+vm_name             = "testVM"
