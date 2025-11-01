@@ -1,5 +1,5 @@
 variable "resource_group_name" {
-  default = "aimsplus"
+  default = "test-rg"
 }
 
 variable "environment" {
