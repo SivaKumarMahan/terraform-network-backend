@@ -7,6 +7,13 @@ resource "azurerm_management_lock" "rg_lock" {
   scope      = data.azurerm_resource_group.existing_rg.id
   lock_level = "CanNotDelete"
   notes      = "This resource group is protected from deletion."
+
+  depends_on = [
+    azurerm_virtual_machine.vm,
+    azurerm_virtual_network.vnet,
+    azurerm_subnet.subnet,
+    azurerm_network_interface.nic
+  ]
 }
 
 resource "azurerm_virtual_network" "vnet" {
